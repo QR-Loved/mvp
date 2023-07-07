@@ -89,7 +89,7 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className="flex max-w-5xl mx-auto flex-col  w-full items-center justify-center py-2 min-h-screen bg-gradient-to-b from-rose-50 to-rose-300">
+    <div className="flex max-w-full mx-auto flex-col  w-full items-center justify-center py-2 min-h-screen bg-gradient-to-b from-rose-50 to-rose-300">
       <Head>
         <title>QRLoved</title>
         {/* get a favicon */}
