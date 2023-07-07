@@ -13,8 +13,8 @@ export default function Header() {
           width={32}
           height={32}
         /> */}
-        <h1 className="sm:text-4xl text-2xl font-bold ml-2 tracking-tight">
-          QRLove
+        <h1 className="sm:text-4xl text-2xl font-bold ml-2 tracking-tight header">
+          QRLoved
         </h1>
       </Link>
       <a
