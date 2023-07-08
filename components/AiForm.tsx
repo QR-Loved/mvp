@@ -1,4 +1,11 @@
 export default function AiForm() {
+  const [bio, setBio] = useState("");
+  const [fromName, setFromName] = useState("")
+  const [toName, setToName] = useState("")
+  const [vibe, setVibe] = useState<VibeType>("Funny");
+  const [loading, setLoading] = useState(false);
+  const [generatedBios, setGeneratedBios] = useState<String>("");
+  const bioRef = useRef<null | HTMLDivElement>(null);
 
   const scrollToBios = () => {
       if (bioRef.current !== null) {
