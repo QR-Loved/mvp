@@ -135,7 +135,7 @@ export default function AiForm() {
           className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
           onClick={(e) => generateBio(e)}
         >
-          Generate your love note &rarr;
+          Generate &rarr;
         </button>
       )}
       {loading && (
@@ -180,7 +180,8 @@ export default function AiForm() {
                     }}
                     key={generatedBio}
                   >
-                    <p>{generatedBio}</p>
+                    <p> To {toName},<br/><br/>{generatedBio}<br/><br/>From,<br/></p>
+                    <p>{fromName}</p>
                   </div>
                 );
               })}
