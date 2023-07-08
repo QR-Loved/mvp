@@ -80,6 +80,30 @@ export default function AiForm() {
   };
   return (
   <>
+    <div className="max-w-xl w-full">
+      <div className="flex mt-5 items-center space-x-3">
+        <p className="text-left font-medium">
+         Your Name/ From:{" "}
+        </p>
+      </div>
+      <input
+        value={fromName}
+        onChange={(e) => setFromName(e.target.value)}
+        className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5 px-4"
+      />
+      <div className="flex mt-5 items-center space-x-3">
+        <p className="text-left font-medium">
+         Recipient name/ To:{" "}
+        </p>
+      </div>
+      <input
+        value={toName}
+        onChange={(e) => setToName(e.target.value)}
+        className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5 px-4"
+        // placeholder={
+        //   "ex. I miss you"
+        // }
+      />
       <div className="flex mt-5 items-center space-x-3">
         <p className="text-left font-medium">
           What do you want your loved one to know?{" "}
