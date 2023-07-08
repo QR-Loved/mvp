@@ -88,6 +88,7 @@ export default function AiForm() {
       </div>
       <input
         value={fromName}
+        placeholder="Your name goes here "
         onChange={(e) => setFromName(e.target.value)}
         className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5 px-4"
       />
@@ -98,11 +99,9 @@ export default function AiForm() {
       </div>
       <input
         value={toName}
+        placeholder="Their name goes here "
         onChange={(e) => setToName(e.target.value)}
         className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5 px-4"
-        // placeholder={
-        //   "ex. I miss you"
-        // }
       />
       <div className="flex mt-5 items-center space-x-3">
         <p className="text-left font-medium">
@@ -115,6 +114,8 @@ export default function AiForm() {
       </div>
       <textarea
         value={bio}
+        // *** figure out how to add mutiple lines to the place holder **
+        placeholder="The thought of you makes me smile."
         onChange={(e) => setBio(e.target.value)}
         rows={4}
         className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
