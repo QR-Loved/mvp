@@ -3,12 +3,12 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="flex justify-center w-full mt-5 border-b-2 pb-7 sm:px-4 px-2">
+    <header className="flex justify-center w-full mt-5 border-b-2 pb-3 sm:px-4 px-2">
       <Link href="./ " className="flex space-x-3">
-        <Image 
+        <Image
           alt="header QR Loved"
           src="/Logo.svg"
-          width={700}
+          width={300}
           height={50}
         />
       </Link>
