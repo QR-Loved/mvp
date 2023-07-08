@@ -180,7 +180,7 @@ export default function AiForm() {
                     }}
                     key={generatedBio}
                   >
-                    <p>{generatedBio}</p>
+                    <p> {fromName},<br/>{generatedBio}</p>
                   </div>
                 );
               })}
