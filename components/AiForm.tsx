@@ -1,5 +1,65 @@
 export default function AiForm() {
 
+  const scrollToBios = () => {
+      if (bioRef.current !== null) {
+        bioRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+  const prompt = `Generate 2 ${vibe} kind messages to a loved one. Do not include emojis. clearly labeled "1." and "2.". ${
+  vibe === "Funny"
+      ? "Make sure there is a joke in there and it's a little ridiculous."
+      : null
+  }
+      Make sure each generated message is less than 300 characters and works for any time of day, has sentences that are found in hallmark cards, and base them on this context: ${bio}${
+  bio.slice(-1) === "." ? "" : "."
+  }`;
+
+  const generateBio = async (e: any) => {
+    e.preventDefault();
+    setGeneratedBios("");
+    setLoading(true);
+    const response = await fetch("/api/generate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        prompt,
+      }),
+    });
+    if (!response.ok) {
+      throw new Error(response.statusText);
+    }
+    // This data is a ReadableStream
+    const data = response.body;
+    if (!data) {
+      return;
+    }
+    const onParse = (event: ParsedEvent | ReconnectInterval) => {
+      if (event.type === "event") {
+        const data = event.data;
+        try {
+          const text = JSON.parse(data).text ?? ""
+          setGeneratedBios((prev) => prev + text);
+        } catch (e) {
+          console.error(e);
+        }
+      }
+    }
+    // https://web.dev/streams/#the-getreader-and-read-methods
+    const reader = data.getReader();
+    const decoder = new TextDecoder();
+    const parser = createParser(onParse);
+    let done = false;
+    while (!done) {
+      const { value, done: doneReading } = await reader.read();
+      done = doneReading;
+      const chunkValue = decoder.decode(value);
+      parser.feed(chunkValue);
+    }
+    scrollToBios();
+    setLoading(false);
+  };
   return (
   <>
       <div className="flex mt-5 items-center space-x-3">
