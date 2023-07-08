@@ -6,6 +6,7 @@ import { Toaster, toast } from "react-hot-toast";
 import DropDown, { VibeType } from "../components/DropDown";
 import Footer from "../components/Footer";
 import Github from "../components/GitHub";
+import Headline from "../components/Headline";
 import Header from "../components/Header";
 import LoadingDots from "../components/LoadingDots";
 import {
@@ -89,7 +90,7 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className="flex max-w-full mx-auto flex-col  w-full items-center justify-center py-2 min-h-screen bg-gradient-to-b from-rose-50 to-rose-300">
+    <div className="flex max-w-full mx-auto flex-col  w-full items-center justify-center py-2 min-h-screen bg-gradient-to-b from-orange-50 to-rose-200">
       <Head>
         <title>QRLoved</title>
         {/* get a favicon */}
@@ -98,10 +99,7 @@ const Home: NextPage = () => {
 
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
-        <h1 className="sm:text-6xl text-4xl max-w-[708px] font-bold text-slate-900">
-          Generate your next love note
-        </h1>
-        <p className="text-slate-500 mt-5">47,118 love notes generated so far.</p>
+        <Headline/>
         <div className="max-w-xl w-full">
           <div className="flex mt-10 items-center space-x-3">
             <Image
