@@ -7,5 +7,10 @@
 tasks:
   - init: npm install && npm run build
     command: npm run start
+ports:
+    - name: Web App
+      description: The main application web server
+      port: 3000-4000
+      onOpen: ignore
 
 
