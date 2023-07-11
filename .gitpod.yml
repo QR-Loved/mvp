@@ -11,6 +11,7 @@ ports:
     - name: Web App
       description: The main application web server
       port: 3001
-      onOpen: open-browser
+      onOpen: open-preview
+      protocol: https
 
 
