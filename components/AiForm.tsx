@@ -83,7 +83,7 @@ export default function AiForm() {
     <div className="max-w-xl w-full">
       <div className="flex mt-5 items-center space-x-3">
         <p className="text-left font-medium">
-         Recipient name/ To:{" "}
+         To:{" "}
         </p>
       </div>
       <input
@@ -94,7 +94,7 @@ export default function AiForm() {
       />
        <div className="flex mt-5 items-center space-x-3">
         <p className="text-left font-medium">
-         Your Name/ From:{" "}
+         From:{" "}
         </p>
       </div>
       <input
