@@ -174,7 +174,7 @@ export default function AiForm() {
                     className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border"
                     onClick={() => {
                       navigator.clipboard.writeText(generatedBio);
-                      toast("Bio copied to clipboard", {
+                      toast("Message copied to clipboard", {
                         icon: "✂️",
                       });
                     }}
