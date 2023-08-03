@@ -7,7 +7,7 @@ export default function Header() {
       <Link href="./ " className="flex space-x-3">
         <Image
           alt="header QR Loved"
-          src="/Logo.svg"
+          src="/Logo2.svg"
           width={300}
           height={50}
         />
