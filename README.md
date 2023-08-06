@@ -1,3 +1,4 @@
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://gitpod.io/projects/mvp)
 <!-- # [QRLove.com](https://www.qrlove.com/) -->
 
 This project generates Love Notes for you using AI.
